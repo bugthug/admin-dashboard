@@ -73,13 +73,33 @@ body {
     padding: 10px;
 }
 
-
-li {
+.sidebar li {
     margin: 10px;
 }
 
+
 .header {
+    display: grid;
     background-color: white;
+}
+
+.header .top-row {
+    display: grid;
+    gap: 100px;
+    grid-auto-flow: column;
+    grid-template-columns: 5fr 3fr;
+}
+
+.header .top-row > .left-section {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-auto-flow: column;    
+}
+
+.header .top-row > .right-section {
+    grid-template-columns: repeat(3,1fr);
+    display: grid;
+    grid-auto-flow: column;
 }
 
 .sidebar * {
