@@ -102,6 +102,26 @@ body {
     grid-auto-flow: column;
 }
 
+.header .bottom-row {
+    display: grid;
+    gap: none;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header .bottom-row .left-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header .bottom-row .left-section img {
+    grid-row: 1 / 4;
+}
+
+.header .bottom-row .right-section {
+    justify-self: end;
+}
+
 .sidebar * {
     color: white;
 }
