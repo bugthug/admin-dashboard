@@ -64,7 +64,7 @@ button, input[type="submit"], input[type="reset"] {
 /* end additonal reset */
 
 
-/* CSS */
+/* CSS btn */
 .button-19 {
   appearance: button;
   background-color: #1899D6;
@@ -125,6 +125,12 @@ button, input[type="submit"], input[type="reset"] {
   cursor: auto;
 }
 
+/* end css btn */
+
+p {
+    line-height: 1.2rem;
+}
+
 html {
     height: 100%;
 }
@@ -176,12 +182,27 @@ body {
 }
 
 .header .top-row > .right-section {
-    grid-template-columns: repeat(3,1fr);
-
     display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
     grid-auto-flow: column;
-    
 }
+
+/* .header .top-row > .right-section img:first-of-type {
+    justify-self: end;
+    align-self: center;
+}
+
+.header .top-row > .right-section img:nth-of-type(2) {
+    align-self: center;
+    justify-self: end;
+}
+
+.header .top-row > .right-section p {
+    justify-self: end;
+    align-self: center;
+    font-weight: 700;
+} */
 
 .header .bottom-row {
     display: grid;
@@ -191,12 +212,28 @@ body {
 }
 
 .header .bottom-row .left-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    gap: 10px;
+    justify-items: space-between;
+}
+
+.header .bottom-row .left-section .greeting {
+    align-self: center;
 }
 
 .header .bottom-row .left-section img {
-    grid-row: 1 / 4;
+    align-self: center;
+    margin: 0 0 0 10px;
+}
+
+.header .bottom-row .left-section .greeting p {
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.header .bottom-row .left-section .greeting h2 {
+    font-weight: 800;
+    font-size: 1.2rem;
 }
 
 .header .bottom-row .right-section {
@@ -206,6 +243,7 @@ body {
     grid-template-columns: repeat(3,1fr);
     place-items: center;
     gap: 30px;
+    margin: 0 30px 0 0;
 }
 
 .sidebar * {
@@ -215,7 +253,7 @@ body {
 .main {
     padding: 20px;
     display: grid;
-    background-color: #cbd5e1;
+    background-color: #f1f5f9;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
 }
@@ -247,6 +285,7 @@ body {
 
 p.title {
     font-size: 1.275rem;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
@@ -264,17 +303,11 @@ p.description {
 
 
 .bottom-btns-row > button > img {
-    width: 18px;
-    height: 18px;
-}
-
-.bottom-btns-row > button:hover {
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 25px;
 }
 
 .announcements {
-    margin: 0 20px 0 0;
     border-radius: 10px;
     background-color: #f8fafc;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -301,7 +334,6 @@ p.description {
 .trending {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
-    margin: 0 20px 0 0;
 }
 
 .trending > .users{
