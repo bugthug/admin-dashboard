@@ -64,6 +64,66 @@ button, input[type="submit"], input[type="reset"] {
 /* end additonal reset */
 
 
+/* CSS */
+.button-19 {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
 
 html {
     height: 100%;
@@ -117,8 +177,10 @@ body {
 
 .header .top-row > .right-section {
     grid-template-columns: repeat(3,1fr);
+
     display: grid;
     grid-auto-flow: column;
+    
 }
 
 .header .bottom-row {
@@ -139,6 +201,11 @@ body {
 
 .header .bottom-row .right-section {
     justify-self: end;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    gap: 30px;
 }
 
 .sidebar * {
@@ -148,7 +215,7 @@ body {
 .main {
     padding: 20px;
     display: grid;
-    background-color: #f3f4f6;
+    background-color: #cbd5e1;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
 }
@@ -186,7 +253,6 @@ p.title {
 p.description {
     color: #6b7280;
     padding: 5px 0 0 0;
-    width: 300px;
     height: 100px;
 }
 
@@ -272,4 +338,5 @@ p.description {
 
 .trending > .users .user:not(:first-of-type) {
     border-top: solid 1px #94a3b8;
+    padding-top: 10px;
 }
