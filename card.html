@@ -55,6 +55,16 @@ table {
 	border-spacing: 0;
 }
 
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 
         .wrapper {
             padding: 30px;
@@ -79,10 +89,20 @@ table {
         p.description {
             color: #6b7280;
             padding: 5px 0 0 0;
+            width: 300px;
+            height: 70px;
         }
 
-        .star-plus {
-            
+        .bottom-btns-row {
+            display: flex;
+            flex-direction: row-reverse; /* easy way to start button placement from rtl */
+            gap: 10px;
+        }
+
+
+        .bottom-btns-row > button > img {
+            width: 18px;
+            height: 18px;
         }
 
     </style>
@@ -90,18 +110,7 @@ table {
 <body>
 
     <div class="wrapper">
-        <div class="card">
-            <p class="title">Super cool project</p>
-            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div class="bottom-btns-row">
-                <button class="star-plus">
-                    <img src="./assets/star-plus-outline.svg" alt="">
-                </button>
-                <button>
 
-                </button>
-            </div>
-        </div>
     </div>   
 </body>
 </html>
