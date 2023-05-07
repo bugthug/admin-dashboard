@@ -146,10 +146,15 @@ body {
 }
 
 .main {
+    padding: 20px;
     display: grid;
     background-color: #f3f4f6;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+}
+
+.your-projects {
+    grid-row: 1 / 4;
 }
 
 .section-title {
@@ -161,7 +166,7 @@ body {
 .cards {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .card {
@@ -170,7 +175,7 @@ body {
     background-color: #f8fafc;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 8px;
-    border-left: solid 5px orange;
+    border-left: solid 8px orange;
 }
 
 p.title {
@@ -203,6 +208,7 @@ p.description {
 }
 
 .announcements {
+    margin: 0 20px 0 0;
     border-radius: 10px;
     background-color: #f8fafc;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -229,9 +235,12 @@ p.description {
 .trending {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
+    margin: 0 20px 0 0;
 }
 
 .trending > .users{
+    display: grid;
+    gap: 10px;
     background-color: #f8fafc;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -239,7 +248,9 @@ p.description {
 }
 
 .trending > .users > .user {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-auto-flow: column;
 }
 
 .trending > .users img {
@@ -254,7 +265,11 @@ p.description {
 .trending > .users p:first-of-type {
    margin: 0 0 4px 0; 
 }
+
 .trending > .users p:not(:first-of-type) {
     color: #6b7280;
 }
 
+.trending > .users .user:not(:first-of-type) {
+    border-top: solid 1px #94a3b8;
+}
