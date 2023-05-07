@@ -147,20 +147,27 @@ body {
 
 .main {
     display: grid;
-    background-color: rgb(214, 207, 207);
+    background-color: #f3f4f6;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-weight: 800;
 }
 
 .cards {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
 }
 
 .card {
     display: grid;
     padding: 10px;
     background-color: #f8fafc;
-    width: 300px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 8px;
     border-left: solid 5px orange;
@@ -218,3 +225,36 @@ p.description {
 .announcements > .announced:not(:first-of-type) {
     border-top: solid 1px #94a3b8;
 }
+
+.trending {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.trending > .users{
+    background-color: #f8fafc;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+}
+
+.trending > .users > .user {
+    display: flex;
+}
+
+.trending > .users img {
+    width: 50px;
+    height: 50px;
+}
+
+.trending > .users .user-info {
+    align-self: center;
+}
+
+.trending > .users p:first-of-type {
+   margin: 0 0 4px 0; 
+}
+.trending > .users p:not(:first-of-type) {
+    color: #6b7280;
+}
+
