@@ -142,37 +142,44 @@ body {
 
 body {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 5fr;
 }
 
 .sidebar {
     grid-row: 1 / 4;
     display: grid;
-    gap: 10px;
-    background-color: #4f46e5;
-    padding: 10px;
+    gap: 65px;
+    background-color: #1e293b;
+    padding: 14px;
+    grid-template-rows: repeat(3,200px);
 }
 
 .sidebar li {
     margin: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .logo > h1 {
     font-size: 34px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
 }
 
 
 .header {
     display: grid;
     background-color: white;
+    margin: 20px;
+    gap: 20px;
 }
 
 .header .top-row {
     display: grid;
     gap: 100px;
     grid-auto-flow: column;
-    grid-template-columns: 5fr 3fr;
+    grid-template-columns: 3fr 1fr;
 }
 
 .header .top-row > .left-section {
@@ -182,27 +189,47 @@ body {
 }
 
 .header .top-row > .right-section {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    place-items: center;
-    grid-auto-flow: column;
-}
-
-/* .header .top-row > .right-section img:first-of-type {
-    justify-self: end;
-    align-self: center;
-}
-
-.header .top-row > .right-section img:nth-of-type(2) {
-    align-self: center;
     justify-self: end;
 }
 
 .header .top-row > .right-section p {
-    justify-self: end;
-    align-self: center;
     font-weight: 700;
-} */
+}
+
+.header .top-row > .right-section {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-flow: column;
+}
+
+.header .top-row input[type=text] {
+    transition: 200ms;
+    color: #111827;
+    background-color: #e2e8f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0 0 0 10px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    outline: none;
+    border: solid 1px transparent;
+}
+
+.header .top-row > .left-section label {
+    align-self: center;
+    justify-self: center;
+}
+
+.header .top-row input[type=text]:focus {
+    transition: 200ms;
+    border: 1px solid #9ca3af;
+}
+
+.header .top-row input[type=text]:hover {
+    transition: 200ms;
+    border: 1px solid #9ca3af;
+}
+
 
 .header .bottom-row {
     display: grid;
@@ -229,6 +256,7 @@ body {
 .header .bottom-row .left-section .greeting p {
     font-weight: 700;
     font-size: 0.85rem;
+    margin-bottom: 3px;
 }
 
 .header .bottom-row .left-section .greeting h2 {
@@ -243,19 +271,22 @@ body {
     grid-template-columns: repeat(3,1fr);
     place-items: center;
     gap: 30px;
-    margin: 0 30px 0 0;
 }
 
 .sidebar * {
     color: white;
 }
 
+.main .right-section {
+    margin-right: 40px;
+}
+
 .main {
-    padding: 20px;
+    padding: 33px;
     display: grid;
     background-color: #f1f5f9;
     grid-template-columns: 2fr 1fr;
-    gap: 20px;
+    gap: 44px;
 }
 
 .your-projects {
@@ -264,19 +295,19 @@ body {
 
 .section-title {
     font-size: 1.5rem;
-    margin: 10px 0;
+    margin: 0 0 20px 0;
     font-weight: 800;
 }
 
 .cards {
     display: grid;
-    gap: 10px;
+    gap: 54px;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .card {
     display: grid;
-    padding: 10px;
+    padding: 30px;
     background-color: #f8fafc;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 8px;
@@ -285,7 +316,7 @@ body {
 
 p.title {
     font-size: 1.275rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -308,20 +339,21 @@ p.description {
 }
 
 .announcements {
+    margin: 0 0 30px 0;
     border-radius: 10px;
     background-color: #f8fafc;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 30px;
+    padding: 16px 30px 30px 30px;
     display: grid;
-    gap: 10px;
+    gap: 30px;
 }
 
 .announcements > .announced > p:first-of-type {
-    margin: 10px 0 0 0;
     font-size: 1.125rem;
     font-weight: 600;
-    padding: 0 0 5px 0;
+    padding: 20px 0 5px 0;
 }
+
 
 .announcements > .announced > p:not(:first-of-type) {
     color: #6b7280;
